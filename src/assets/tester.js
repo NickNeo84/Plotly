@@ -1,7 +1,8 @@
 graphDiv = document.getElementById('tester');
 
+if(graphDiv){
 graphDiv.on('plotly_selected', function(eventData) {
-console.log(eventData.points);
+// console.log(eventData.points);
 var y = [];
 var sel;
 eventData.points.forEach(function(pt) {
@@ -9,8 +10,9 @@ eventData.points.forEach(function(pt) {
   y.push(pt.y);
 });
 sel = y.join(',');
- $('button').trigger('click',["foo"]);
  $('#selectPoints').val(sel);
+ $('button').trigger('click');
 //  var m = $('#selectPoints').val();
 //  console.log(m);
-});
+})
+}

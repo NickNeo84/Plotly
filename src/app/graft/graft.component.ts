@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit  } from '@angular/core';
 import { FormsModule, FormControl }   from '@angular/forms';
-import T from "src/assets/tester.js";
+declare var getP: any;
 declare var Plotly: any;
 declare var $: any;
 
@@ -17,7 +17,7 @@ export class GraftComponent implements OnInit, AfterViewInit  {
   private myPlot: ElementRef;
   @ViewChild("selectPoints", { static: false })
   private points: ElementRef;
-  public dataSelect:any;
+  // public dataSelect:any;
   public selectPoint: string;
 
 
@@ -53,21 +53,16 @@ public data2:any = {
 
 
   ngAfterViewInit() {
-    $(this.points.nativeElement).on('change', (e) => {
-      console.log('Change made -- ngAfterViewInit');
-      this.testClick(e);
-    });
   }
 
-  testClick(dt){
-    console.log(dt);
-
+  testClick(){
+    console.log('Работает мать его', getP());
   }
 
   
 
   ngOnInit() {
-    
+    new getP();
     // let myPlot = document.getElementById('Test');
     // console.log(myPlot);
     $.getScript("assets/tester.js");
