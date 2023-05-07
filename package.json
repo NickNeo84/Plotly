@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.9",
     "@types/jquery": "^3.3.31",
     "angular-plotly.js": "^1.4.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "koa": "^2.8.2",
     "koa-body": "^4.1.1",
     "koa-convert": "^1.2.0",
